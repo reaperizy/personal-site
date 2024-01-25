@@ -1,0 +1,32 @@
+.background-title{
+    background-color: #2D3250;
+}
+
+.background-title2{
+    background-color: #424769;
+}
+
+.background-navbar{
+    background-color: #424769;
+}
+
+.button-cv{
+    background-color: #F6B17A;
+    color: #F1F6F9;
+}
+
+.text-white{
+    background-color: #F1F6F9;
+}
+
+body{
+    background-color: #2D3250;
+}
+
+.ul > .nav-item-foot {
+    color: #F1F6F9;
+}
+
+.justify-text { 
+    text-align: justify;
+}
