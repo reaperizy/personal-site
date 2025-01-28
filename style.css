@@ -255,12 +255,12 @@ footer {
 /* Ukuran carousel lebih kecil di layar desktop */
 @media (min-width: 992px) {
   #portoslide .carousel-inner {
-    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    max-width: 1000px; /* Sesuaikan nilai ini sesuai kebutuhan */
     margin: 0 auto;
   }
 
   #portoslide .carousel-caption {
-    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    max-width: 900px; /* Sesuaikan nilai ini sesuai kebutuhan */
     margin: 0 auto;
     background: rgba(66, 71, 105, 0.8); /* Background semi-transparan */
     padding: 15px; /* Padding untuk kenyamanan */
@@ -268,7 +268,7 @@ footer {
     bottom: 20px; /* Menempatkan di bagian bawah gambar */
     left: 50%; /* Menempatkan di tengah */
     transform: translateX(-50%); /* Mengatur agar benar-benar di tengah */
-    font-size: medium;
+    font-size: small;
   }
 
   #portoslide img {
