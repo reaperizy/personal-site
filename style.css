@@ -1,32 +1,284 @@
-.background-title{
+/* General Styles */
+body {
+    background-color: #2D3250;
+    color: #F1F6F9;
+    font-family: Arial, sans-serif;
+}
+
+.background-title {
     background-color: #2D3250;
 }
 
-.background-title2{
+.background-title2 {
     background-color: #424769;
 }
 
-.background-navbar{
+.background-navbar {
     background-color: #424769;
 }
 
-.button-cv{
+/* Transisi halus */
+.button-cv {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button-cv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol CV */
+.button-cv {
     background-color: #F6B17A;
     color: #F1F6F9;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+.button-cv:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 100%;
+    background: #FF6F61;
+    transition: all 0.4s;
+    transform: translateX(-50%) scaleX(0) rotate(45deg);
+    z-index: -1;
 }
 
-.text-white{
-    background-color: #F1F6F9;
+.button-cv:hover:before {
+    transform: translateX(-50%) scaleX(1) rotate(45deg);
 }
 
-body{
-    background-color: #2D3250;
+.button-cv:hover {
+    color: white;
 }
 
-.ul > .nav-item-foot {
+.text-white {
     color: #F1F6F9;
 }
 
-.justify-text { 
-    text-align: justify;
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* Navbar Styles */
+.nav-link {
+    color: #F1F6F9 !important;
+}
+
+.nav-link:hover {
+    color: #F6B17A !important;
+    transition: color 0.3s ease;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #2D3250;
+    color: #F1F6F9;
+}
+
+.modal-header, .modal-footer {
+    border-color: #424769;
+}
+
+.modal-title {
+    color: #F1F6F9;
+}
+
+/* Form Styles */
+.form-control {
+    background-color: #424769;
+    color: #F1F6F9;
+    border: 1px solid #F6B17A;
+}
+
+.form-control:focus {
+    background-color: #424769;
+    color: #F1F6F9;
+    border-color: #F6B17A;
+    box-shadow: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #424769;
+    color: #F1F6F9;
+}
+
+.nav-item-foot a {
+    color: #F1F6F9;
+}
+
+.nav-item-foot a:hover {
+    color: #F6B17A;
+}
+
+/* Light Theme Styles */
+.light-theme {
+    background-color: #F1F6F9;
+    color: #2D3250;
+}
+
+.light-theme .background-title,
+.light-theme .background-title2,
+.light-theme .background-navbar {
+    background-color: #F1F6F9;
+    color: #2D3250;
+}
+
+.light-theme .text-white {
+    color: #2D3250;
+}
+
+.light-theme .button-cv {
+    background-color: #2D3250;
+    color: #F1F6F9;
+}
+
+.light-theme .nav-link {
+    color: #2D3250 !important;
+}
+
+.light-theme .nav-link:hover {
+    color: #F6B17A !important;
+}
+
+.light-theme .modal-content {
+    background-color: #F1F6F9;
+    color: #2D3250;
+}
+
+.light-theme .modal-title {
+    color: #2D3250;
+}
+
+.light-theme .form-control {
+    background-color: #F1F6F9;
+    color: #2D3250;
+    border: 1px solid #2D3250;
+}
+
+.light-theme .form-control:focus {
+    background-color: #F1F6F9;
+    color: #2D3250;
+    border-color: #2D3250;
+}
+
+.light-theme footer {
+    background-color: #F1F6F9;
+    color: #2D3250;
+}
+
+.light-theme .nav-item-foot a {
+    color: #2D3250;
+}
+
+.light-theme .nav-item-foot a:hover {
+    color: #F6B17A;
+}
+
+/* Ukuran carousel lebih kecil di layar desktop */
+@media (min-width: 992px) {
+  #portoslide .carousel-inner {
+    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    margin: 0 auto;
+  }
+
+  #portoslide .carousel-caption {
+    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    margin: 0 auto;
+  }
+
+  #portoslide img {
+    max-height: 500px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    object-fit: cover;
+  }
+}
+
+
+/* Navbars Section Styles */
+#navbars {
+    background-color: #2D3250; /* Warna latar belakang */
+    padding-top: 10px; /* Padding atas diperkecil */
+    padding-bottom: 10px; /* Padding bawah diperkecil */
+}
+
+#navbars .container-sm {
+    padding-top: 0; /* Menghapus padding atas pada container */
+    padding-bottom: 0; /* Menghapus padding bawah pada container */
+}
+
+#navbars header {
+    margin-top: 0; /* Menghapus margin atas */
+}
+
+#navbars .nav-pills {
+    gap: 10px; /* Jarak antara menu navigasi */
+}
+
+#navbars .nav-link {
+    color: #F1F6F9 !important; /* Warna teks default */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+#navbars .nav-link:hover {
+    color: #F6B17A !important; /* Warna teks saat hover */
+    transform: scale(1.05); /* Efek scaling saat hover */
+}
+
+#navbars .nav-link.active {
+    background-color: #424769 !important; /* Warna latar belakang menu aktif */
+    color: #F1F6F9 !important; /* Warna teks menu aktif */
+}
+
+#navbars .fs-4 {
+    font-size: 1.5rem; /* Ukuran font untuk nama */
+    font-weight: bold; /* Tebalkan font */
+}
+
+#navbars .border-bottom {
+    border-color: #424769 !important; /* Warna garis bawah */
+}
+
+/* Ukuran carousel lebih kecil di layar desktop */
+@media (min-width: 992px) {
+  #portoslide .carousel-inner {
+    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    margin: 0 auto;
+  }
+
+  #portoslide .carousel-caption {
+    max-width: 800px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    margin: 0 auto;
+    background: rgba(66, 71, 105, 0.8); /* Background semi-transparan */
+    padding: 15px; /* Padding untuk kenyamanan */
+    border-radius: 5px; /* Membuat sudut membulat */
+    bottom: 20px; /* Menempatkan di bagian bawah gambar */
+    left: 50%; /* Menempatkan di tengah */
+    transform: translateX(-50%); /* Mengatur agar benar-benar di tengah */
+    font-size: medium;
+  }
+
+  #portoslide img {
+    max-width: 100%; /* Membatasi lebar gambar tidak lebih dari 100% */
+    height: auto; /* Menjaga aspek rasio */
+    object-fit: contain; /* Menjaga gambar tetap proporsional tanpa ter-zoom */
+  }
+}
+
+  
+  
+
+  
