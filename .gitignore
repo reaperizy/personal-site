@@ -1,0 +1,11 @@
+# Mengabaikan semua file bertipe .php atau berakhiran _bckp.php
+# *.php
+# *_bckp.php
+
+# PENGECUALIAN: Tetap track file ini walau terkena aturan di atas
+# !index_bckp.php
+
+# Mengabaikan file backup spesifik
+style_bckp.css
+script_ori_bckp.js
+index_bckp.html
